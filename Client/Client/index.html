@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            background-color: whitesmoke;
+        }
+
+    </style>
+</head>
+<body >
+<section ng-controller="appCtrl">
+
+    <div>
+        <ui-view></ui-view>
+    </div>
+</section>
+
+
+
+<!-- JS (load angular, ui-router, and our custom js file) -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<!--App Config-->
+<script src="script/app.js"></script>
+<script src="script/config.router.js"></script>
+<!-- controller files-->
+<script src="script/app.ctrl.js"></script>
+<script src="script/controller/products.js"></script>
+<script src="script/controller/productDetail.js"></script>
+<script src="script/controller/checkOut.js"></script>
+<!-- End controller File-->
+
+<!-- Service File-->
+<script src="script/services/ajaxService.js"></script>
+
+<!-- End Service File-->
+</body>
+</html>

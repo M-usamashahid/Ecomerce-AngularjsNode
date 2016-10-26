@@ -1,0 +1,56 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Dev Crew</a>
+        </div>
+
+        <button type="button" ui-sref="checkOut" class="btn btn-success navbar-btn pull-right">
+            Check Out
+            <i class="glyphicon-shopping-cart glyphicon"> </i>
+            <span class="badge">{{vm.count}}</span>
+        </button>
+
+
+    </div>
+</nav>
+
+<div class="container">
+    <div class="panel panel-default" style="margin-top: 30px;">
+        <h4 ng-if="vm.message" class="panel-heading">
+            Your cart is empty please go to <a href="#">Product Screen</a>
+        </h4>
+        <h4 ng-if="!vm.message" class="panel-heading">
+            Cart Detail
+        </h4>
+        <table class="table table-bordered" ng-if="!vm.message">
+            <thead>
+            <tr>
+                <th >#</th>
+                <th >Name</th>
+                <th >Rate</th>
+                <th >Quantity</th>
+                <th >Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="c in vm.cart.products">
+                <td>{{$index + 1}}</td>
+                <td>{{c.productId.name}}</td>
+                <td style="text-align: right">$ {{c.productId.price}}</td>
+                <td>{{c.quantity}}</td>
+                <td style="text-align: right">$ {{c.quantity * c.productId.price}}</td>
+            </tr>
+            <tr>
+                <th colspan="4">Total</th>
+                <th style="text-align: right">$ {{vm.total}}</th>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class=" col-md-6 pull-right" ng-if="!vm.message">
+        <button class="btn btn-success btn-block " ng-click="vm.checkOut()">Done</button>
+    </div>
+</div>

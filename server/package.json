@@ -1,0 +1,23 @@
+{
+  "name": "DevCrew-server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "ejs": "^2.4.1",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "express-winston": "^2.0.0",
+    "faker": "^3.1.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.3.4",
+    "morgan": "^1.6.1",
+    "q": "^1.4.1",
+    "winston": "^2.2.0"
+  }
+}

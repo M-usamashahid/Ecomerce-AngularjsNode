@@ -1,0 +1,32 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Dev Crew</a>
+        </div>
+
+        <button type="button" ui-sref="checkOut" class="btn btn-success navbar-btn pull-right">
+            Check Out
+            <i class="glyphicon-shopping-cart glyphicon"> </i>
+            <span class="badge">{{vm.count}}</span>
+        </button>
+
+
+    </div>
+</nav>
+<div class="row">
+    <div class="container">
+        <div class="thumbnail col-md-5">
+            <img src="{{vm.product.image}}" alt="Image Loading ...">
+        </div>
+        <h2 class="col-md-6">Name : </h2>
+        <h4 class="col-md-6">
+            {{vm.product.name}}
+        </h4>
+        <h2 class="col-md-6">Description : </h2>
+        <h4 class="col-md-6">
+            {{vm.product.description}}
+        </h4>
+        <a ng-click="vm.addCart(product._id)" class="btn btn-success" role="button">Add Cart</a>
+    </div>
+</div>

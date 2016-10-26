@@ -1,0 +1,19 @@
+{
+  "name": "DevCrew",
+  "version": "1.0.0",
+  "authors": [
+    "Usama"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  }
+}
